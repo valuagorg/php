@@ -19,7 +19,7 @@ include_once "add/conn.php";
 <div>
 
 <center>
-<img src="<?php echo get_template_directory_uri(); ?> /BYG.jpg" />
+<img src="<?php echo get_template_directory_uri(); ?>/BYG.jpg/>
 <nav >
 <a href="all-seeds/" id="seeds">All Seeds</a> |
 <a href="search-seed-by-id/" id="search">Search Seeds</a> |
