@@ -1,0 +1,184 @@
+h6{
+    color:black;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+
+}
+
+#green{
+    background-color: green;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#exampleFormControlSelect1{
+    background-color: rgb(0, 255, 191);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    
+    
+    
+}
+#exampleFormControlSelect2{
+    background-color: rgb(0, 255, 191);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    
+    
+}
+#unitlevelname {
+    background-color: rgb(0, 255, 191);
+    margin-right: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+#available_unit{
+    margin-right: 500px;
+    
+}
+
+img{
+    width: 250px;
+    height: 250px;
+    margin-top: -300px;
+}
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+body{
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5da63d4cac777f48881127b4/1571782131016-6A1JSZ0VSMAEMUWTZGK6/IMG_7465.jpg?format=1500w");
+    
+}
+
+#x{
+    margin-left: 700px;
+    margin-top: 25px;
+}
+
+#plant{
+    background-color: rgb(6, 173, 6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    color: black;
+    border-color: darkgreen;
+    margin-bottom: 10px;
+    width: 160px;
+}
+
+#treat{
+    background-color: rgb(6, 173, 6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    color: black;
+    border-color: darkgreen;
+    margin-bottom: 10px;
+    width: 160px;
+}
+
+#transplant{
+    background-color: rgb(6, 173, 6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    color: black;
+    border-color: darkgreen;
+    margin-bottom: 10px;
+}
+
+#harvest{
+    background-color: rgb(6, 173, 6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    color: black;
+    border-color: darkgreen;
+    margin-bottom: 10px;
+    width: 160px;
+}
+
+#navigation-bar{
+    margin-left: 500px;
+    margin-top: -50px;
+    
+}
+
+#seeds{
+    background-color: rgba(32, 30, 30, 1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 4px;
+    font-size: 10px 24px;
+    width: 160px;
+    border-color: gray;
+    color: white;
+   
+}
+
+#seeds:hover{
+    background-color: black; 
+    color: white;
+   
+}
+
+#search{
+    background-color: rgba(32, 30, 30, 1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 4px;
+    font-size: 10px 24px;
+    border-color: gray;
+    color: white;
+}
+
+#search:hover{
+    background-color: rgb(10, 46, 1); 
+    color: white;
+}
+
+#action{
+    background-color: rgba(32, 30, 30, 1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 4px;
+    font-size: 10px 24px;
+    border-color: gray;
+    color: white;
+}
+
+#action:hover {
+    background-color: black; 
+    color: white;
+}
+
+#reportv1{
+    background-color: rgba(32, 30, 30, 1);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    border-radius: 4px;
+    font-size: 10px 24px;
+    color: white;
+    border-color: gray;
+}
