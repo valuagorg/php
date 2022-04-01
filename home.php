@@ -19,7 +19,9 @@ include_once "add/conn.php";
 <nav >
 <a href="all-seeds/">All Seeds</a> |
 <a href="search-seed-by-id/">Search Seeds</a> |
-<a href="action-history/">Action History</a> 
+<a href="action-history/">Action History</a> |
+<a href="report-v1/">Report v1</a>
+ 
 </nav>
 </center>
 <br>

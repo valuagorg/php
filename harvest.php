@@ -61,12 +61,14 @@ if(isset($_POST['harvest'])){
 	
 	$unitlevel_name = $_POST['unitlevel_name'];
 	
-	$total_pots=$_POST['total_pots'];
+	$total_pots=$_POST['total_pots'].' pots';
 	$harvested_weight=$total_pots.' oz';
 	
 	date_default_timezone_set('America/New_York');
 	$t=time();
 	$post_date = date("m-d-Y h:i A",$t);
+	$harvest_date =  date("m-d-Y", $t);
+	
 
 			
 	if(empty($unitlevel_name) OR empty($total_pots)){
@@ -116,6 +118,8 @@ if(isset($_POST['harvest'])){
 		
 		$wpdb->update('seed_id_table', array( 
 		'seed_stage'=>'Harvested',
+		'harvest_date'=>$harvest_date,
+		'harvest_amount'=>$total_pots,
 		'seed_location'=>'4444',
 		'seed_expected_date'=>'5555'), 
 		array('seed_id'=>$seed_id));
@@ -138,6 +142,8 @@ if(isset($_POST['harvest'])){
 		
 		$wpdb->update('seed_id_table', array( 
 		'seed_stage'=>'Harvested',
+		'harvest_date'=>$harvest_date,
+		'harvest_amount'=>$harvested_weight,
 		'seed_location'=>'4444',
 		'seed_expected_date'=>'5555'), 
 		array('seed_id'=>$seed_id));

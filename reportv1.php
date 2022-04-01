@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Seed by Type
+ * Template Name: reportv1
  */
 
 get_header(); 
@@ -17,7 +17,8 @@ include_once "add/conn.php";
 			<th scope="col">Id</th>
 			<th scope='col'>Type</th>
 			<th scope="col">Color</th>
-			<th scope="col">Stage</th>
+			
+			<th scope="col">Harvest Amount</th>
 			<th scope="col">Harvest Date</th>
 		</tr>
 	</thead>
@@ -47,13 +48,12 @@ if(isset($_GET['id'])){
 		$seed_color = $row['seed_color'];
 		$seed_location = $row['seed_location'];	
 		$harvest_date = $row['harvest_date'];
+		$harvest_amount = $row['harvest_amount'];
 		$seed_expected_date = $row['seed_expected_date'];	
 
 	?>
 	
-	
-	
-	
+
 	<!-- Echoing from DB starts-->
 	<th scope="row"><?php echo $seed_id;?></th>
 		<td><?php echo seed_name_converter($seed_type); ?></td>
@@ -85,7 +85,8 @@ if(isset($_GET['id'])){
 			$newcolor=$seed_color." ⚫";
 			echo $newcolor; 
 		} ?></td>
-		<td><?php echo $seed_stage; ?></td>
+		
+		<td><?php echo $harvest_amount; ?></td>
 		<td><?php echo $harvest_date; ?></td>
 	</tr>
 	
