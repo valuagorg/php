@@ -10,7 +10,7 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
-<style><?php include 'C:\xampp\htdocs\wordpress_byg\wp-content\themes\twentytwentyone\plant_style.css'; ?></style>
+<style><?php include 'plant_style.css'; ?></style>
 
 
 <!DOCTYPE html>
