@@ -17,7 +17,7 @@ include_once "add/conn.php";
 			<th scope="col">Id</th>
 			<th scope='col'>Type</th>
 			<th scope="col">Color</th>
-			<th scope="col">Stage</th>
+			
 			<th scope="col">Harvest Amount</th>
 			<th scope="col">Harvest Date</th>
 		</tr>
@@ -85,7 +85,7 @@ if(isset($_GET['id'])){
 			$newcolor=$seed_color." ⚫";
 			echo $newcolor; 
 		} ?></td>
-		<td><?php echo $seed_stage; ?></td>
+		
 		<td><?php echo $harvest_amount; ?></td>
 		<td><?php echo $harvest_date; ?></td>
 	</tr>

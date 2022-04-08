@@ -12,7 +12,7 @@ include_once "add/conn.php";
 ?>
 <hr>
 <table class="table table-striped">
-	<thead>
+	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Id</th>
 			<th scope='col'>Type</th>

@@ -10,9 +10,9 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
-<hr>
+
 				<table class="table table-striped">
-				  <thead>
+				  <thead class="thead-dark">
 					<tr>
 					  <th scope="col">Id</th>
 					  <th scope='col'>Employee</th>
@@ -39,6 +39,8 @@ include_once "add/conn.php";
 				  
 				<style>
 .table {text-align: center;}
+
+
 </style>
 					
 				  <?php
