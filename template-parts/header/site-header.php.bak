@@ -15,13 +15,12 @@ $wrapper_classes .= has_nav_menu( 'primary' ) ? ' has-menu' : '';
 
 <header id="masthead" class="<?php echo esc_attr( $wrapper_classes ); ?>">
 
+
+<img id="kippaz" src="<?php echo get_template_directory_uri();  ?> /BYG.jpg"/ width="100" height="100">
+
 	<?php get_template_part( 'template-parts/header/site-branding' ); ?>
 	<?php get_template_part( 'template-parts/header/site-nav' ); ?>
 
-</header><!-- #masthead -->
-<style>
-#masthead{
-	  background-color: yellow;
 
-}
-</style>
+</header><!-- #masthead -->
+

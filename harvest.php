@@ -61,7 +61,8 @@ if(isset($_POST['harvest'])){
 	
 	$unitlevel_name = $_POST['unitlevel_name'];
 	
-	$total_pots=$_POST['total_pots'].' pots';
+	$total_pots=$_POST['total_pots'];
+	$pots_temp=$total_pots.' pots';
 	$harvested_weight=$total_pots.' oz';
 	
 	date_default_timezone_set('America/New_York');
@@ -98,16 +99,14 @@ if(isset($_POST['harvest'])){
 			$type=$row['type'];
 		}
 	}
-	
-	
-	
+		
 	if( $type == "classic"){
 		$wpdb->insert('actions_table', array(
 		'employee_name' => $current_user,
 		'unitlevel_name' => $unitlevel_name,
 		'seed_id' => $seed_id,
 		'harvest' => 'Harvested',
-		'harvested_pots' => $total_pots,
+		'harvested_pots' => $pots_temp,
 		'action_date' => $post_date
 		));
 		
@@ -119,7 +118,7 @@ if(isset($_POST['harvest'])){
 		$wpdb->update('seed_id_table', array( 
 		'seed_stage'=>'Harvested',
 		'harvest_date'=>$harvest_date,
-		'harvest_amount'=>$total_pots,
+		'harvest_amount'=>$pots_temp,
 		'seed_location'=>'4444',
 		'seed_expected_date'=>'5555'), 
 		array('seed_id'=>$seed_id));

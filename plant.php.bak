@@ -12,10 +12,8 @@ global $wpdb
 <form method="post" enctype="multipart/form-data">
 
 	<?php 
-	
 		global $current_user; get_currentuserinfo();
 		$current_user=$current_user->display_name
-	
 	?>
 					
 	<h6>Available Units and Levels</h6>
@@ -58,11 +56,20 @@ global $wpdb
 		$seed_expected_date= $row['expected_time'];
 		$type=$row['type'];
 	?>
-	<option value="<?php echo $seed_id; ?>"><?php echo $seed_name; ?></option>
+
+	<option value="<?php echo $seed_id; ?>"><?php 
+	
+	if ($seed_id != 26 AND $seed_id!=27 AND $seed_id!=28){
+		echo "H-".$seed_name;
+	}
+	else{
+		echo "S-".$seed_name;
+	}
+	?></option>
+	
 	<?php
 	}
-	//Query Operations
-					
+	//Query Operations					
 	?>
 	</select>								
 	<br>	

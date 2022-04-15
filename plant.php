@@ -56,11 +56,19 @@ global $wpdb
 		$seed_expected_date= $row['expected_time'];
 		$type=$row['type'];
 	?>
-	<option value="<?php echo $seed_id; ?>"><?php echo $seed_name; ?></option>
+
+	<option value="<?php echo $seed_id; ?>"><?php 
+	if ($seed_id != 26 AND $seed_id!=27 AND $seed_id!=28){
+		echo "H-".$seed_name;
+	}
+	else{
+		echo "S-".$seed_name;
+	}
+	?></option>
+	
 	<?php
 	}
-	//Query Operations
-					
+	//Query Operations					
 	?>
 	</select>								
 	<br>	
