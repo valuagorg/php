@@ -11,6 +11,7 @@ get_header();
 global $wpdb
 ?>
 <?php
+<?php include_once "topnav.php"; ?>
 if(isset($_GET['id'])){
 	$seed_id = $_GET['id'];
 	
@@ -103,7 +104,7 @@ if(isset($_GET['id'])){
 </style>
 <hr>
 <table class="table table-striped">
-				  <thead class="thead-dark">
+	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Action Id</th>
 			<th scope='col'>Employee</th>

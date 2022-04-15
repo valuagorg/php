@@ -2,6 +2,14 @@
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+
 <?php
 /**
  * Template Name: Units and Levels
@@ -10,6 +18,7 @@ include_once "add/conn.php";
 get_header(); 
 global $wpdb
 ?>
+
 <?php
 if(isset($_GET['id'])){
 	$unit_name = $_GET['id'];

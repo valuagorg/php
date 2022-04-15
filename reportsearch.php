@@ -10,13 +10,15 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
+<?php include_once "topnav.php"; ?>
+
+
+
 <div>
 <center>
 <form method="post" enctype="multipart/form-data">
 
-<h5>Report v1</h5>
-<br>
-					
+		
 	<h6>Enter date</h6>
 	<input type='text' name='input_date' class='form-control' placeholder='ex: 04-01-2022'>
 	

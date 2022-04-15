@@ -84,7 +84,7 @@ global $wpdb
 <?php
 //Querry Operations
 if(isset($_POST['transplant'])){ 	
-	$unit_user = 'Temp Name';
+	
 	$unitlevel_name = $_POST['unitlevel_name'];
 	
 	$total_pots=$_POST['total_pots'];
@@ -110,7 +110,7 @@ if(isset($_POST['transplant'])){
 
 	
 	$wpdb->insert('actions_table', array(
-    'employee_name' => $unit_user,
+    'employee_name' => $current_user,
 	'unitlevel_name' => $unitlevel_name,
 	'seed_id' => $seed_id,
 	'transplant' => 'Transplanted',

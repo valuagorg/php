@@ -6,7 +6,7 @@
 get_header(); 
 global $wpdb
 ?>
-
+<?php include_once "topnav.php"; ?>
 <div>
 <center>
 <form method="post" enctype="multipart/form-data">

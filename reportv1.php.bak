@@ -10,7 +10,6 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
-<hr>
 <table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>

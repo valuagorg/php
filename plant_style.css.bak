@@ -1,0 +1,114 @@
+h6{
+    color:black;
+}
+
+#red{
+    background-color: red;
+}
+
+#yellow{
+    background-color: yellow;
+
+}
+
+#green{
+    background-color: green;
+}
+
+#blue{
+    background-color: blue;
+}
+
+#exampleFormControlSelect1{
+    background-color: rgb(0, 255, 191);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    
+    
+    
+}
+#exampleFormControlSelect2{
+    background-color: rgb(0, 255, 191);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    
+    
+}
+#unitlevelname {
+    background-color: rgb(0, 255, 191);
+    margin-right: 500px;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    
+}
+
+#available_unit{
+    margin-right: 500px;
+    
+}
+
+
+.dot {
+    height: 25px;
+    width: 25px;
+    background-color: red;
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+body{
+    background-image: url("https://images.squarespace-cdn.com/content/v1/5da63d4cac777f48881127b4/1571782131016-6A1JSZ0VSMAEMUWTZGK6/IMG_7465.jpg?format=1500w");
+	background-attachment:fixed;
+    
+}
+
+#x{
+    margin-left: 700px;
+    margin-top: 25px;
+}
+
+#optbtn{
+    background-color: rgb(6, 173, 6);
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    border-radius: 12px;
+    font-size: 10px 24px;
+    color: black;
+    border-color: darkgreen;
+    margin-bottom: 10px;
+    width: 160px;
+}
+
+
+#nav{
+    margin-left: auto;
+	margin-right: auto;
+    margin-top: auto;
+	width: 660px;
+	height: 50px;
+}
+
+#datetimepicker{
+    width: 150px;
+	background-color: rgba(32, 30, 30, 1);
+    text-align: center;
+    color: white;
+	border-radius: 4px;
+	border-color: white;
+}
+
+#optnav{
+    width: 150px;
+	background-color: rgba(32, 30, 30, 1);
+    text-align: center;
+    color: white;
+	border-radius: 4px;
+	border-color: white;
+
+}
+
+

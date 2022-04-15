@@ -58,7 +58,6 @@ global $wpdb
 	?>
 
 	<option value="<?php echo $seed_id; ?>"><?php 
-	
 	if ($seed_id != 26 AND $seed_id!=27 AND $seed_id!=28){
 		echo "H-".$seed_name;
 	}

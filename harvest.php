@@ -5,7 +5,9 @@
 
 get_header(); 
 global $wpdb
+
 ?>
+<?php include_once "topnav.php"; ?>
 
 <div>
 <center>

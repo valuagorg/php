@@ -10,15 +10,70 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
+<?php include_once "topnav.php"; ?>
+
+<head>
+<link rel="stylesheet" type="text/css" href="https://www.jqueryscript.net/demo/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker/jquery.datetimepicker.css"/>
+<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+
+<style>
+
+.datetimepicker{
+	width: 18em;
+}
+
+</style>
+
+</head>
+
 <div>
 <center>
 <form method="post" enctype="multipart/form-data">
 
-<h5>Report v1</h5>
-<br>
-					
-	<h6>Enter date</h6>
-	<input type='text' name='input_date' class='form-control' placeholder='ex: 04-01-2022'>
+		
+	<h3>DatePicker</h3>
+	<input type="text" name = 'input_date' id="datetimepicker"/><br><br>
+	
+	<script src="https://www.jqueryscript.net/demo/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker/jquery.js"></script>
+<script src="https://www.jqueryscript.net/demo/Clean-jQuery-Date-Time-Picker-Plugin-datetimepicker/jquery.datetimepicker.js"></script>
+<script>
+
+$('#datetimepicker').datetimepicker({
+	timepicker:false,
+	format:'m-d-Y',
+	formatDate:'Y-m-d',
+
+});
+
+</script>
+<script>
+try {
+  fetch(new Request("https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js", { method: 'HEAD', mode: 'no-cors' })).then(function(response) {
+    return true;
+  }).catch(function(e) {
+    var carbonScript = document.createElement("script");
+    carbonScript.src = "//cdn.carbonads.com/carbon.js?serve=CK7DKKQU&placement=wwwjqueryscriptnet";
+    carbonScript.id = "_carbonads_js";
+    document.getElementById("carbon-block").appendChild(carbonScript);
+  });
+} catch (error) {
+  console.log(error);
+}
+</script>
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
 	
 	<h6>Choose Color</h6>					
 	<select name="color" class="form-control" id="exampleFormControlSelect1">
@@ -62,8 +117,8 @@ if(isset($_POST['go'])){
 ?>
 	
 <style>
-.btn {width: 150px;}
-.form-control {width: 230px; text-align: center;}
+.btn {width: 200px;}
+.form-control {width: 200px; text-align: center;}
 </style>
 
 

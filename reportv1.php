@@ -10,6 +10,7 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
+<?php include_once "topnav.php"; ?>
 <table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>

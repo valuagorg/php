@@ -9,6 +9,7 @@ global $wpdb
 <?php
 include_once "add/func.php";
 include_once "add/conn.php";
+
 ?>
 <style><?php include 'plant_style.css'; ?></style>
 
@@ -19,12 +20,15 @@ include_once "add/conn.php";
 <div>
 
 <center>
-<img src="<?php echo get_template_directory_uri(); ?>/BYG.jpg"/>
-<nav >
-<a href="all-seeds/" id="seeds">All Seeds</a> |
-<a href="search-seed-by-id/" id="search">Search Seeds</a> |
-<a href="action-history/" id="action">Action History</a> |
-<a href="report-v1/" id="reportv1">Report v1</a>
+<img width='250px' height='250px' src="<?php echo get_template_directory_uri(); ?>/BYG LOGO_HIGHRES.png"/>
+</center>
+<br>
+<center>
+<nav id='nav' class='navbar'>
+<a href="all-seeds/" id="optnav">All Seeds</a>
+<a href="search-seed-by-id/" id="optnav">Search Seeds</a>
+<a href="action-history/" id="optnav">Action History</a>
+<a href="report/" id="optnav">Report</a>
  
 </nav>
 </center>
@@ -34,16 +38,16 @@ include_once "add/conn.php";
 
 <center>
 
-	<button name="plant" type="submit" onclick="window.location.href='plant'" class="btn btn-primary btn-lg " id="plant">Plant</button>
+	<button name="plant" type="submit" onclick="window.location.href='plant'" class="btn btn-primary btn-lg " id="optbtn">Plant</button>
 	<br>
 	<br>	
-	<button name="treat" type="submit" onclick="window.location.href='treat'" class="btn btn-primary btn-lg " id="treat">Treat</button>
+	<button name="treat" type="submit" onclick="window.location.href='treat'" class="btn btn-primary btn-lg " id="optbtn">Treat</button>
 	<br>
 	<br>
-	<button  name="transplant" type="submit" onclick="window.location.href='transplant'"  class="btn btn-primary btn-lg" id="transplant">Transplant</button>
+	<button  name="transplant" type="submit" onclick="window.location.href='transplant'"  class="btn btn-primary btn-lg" id="optbtn">Transplant</button>
 	<br>
 	<br>
-	<button name="harvest" type="submit" onclick="window.location.href='harvest'"  class="btn btn-success btn-lg" id="harvest">Harvest</button>
+	<button name="harvest" type="submit" onclick="window.location.href='harvest'"  class="btn btn-success btn-lg" id="optbtn">Harvest</button>
 </center>	
 	
 <style>

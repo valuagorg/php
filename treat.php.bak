@@ -82,7 +82,7 @@ global $wpdb
 
 <?php
 if(isset($_POST['treat'])){ 	
-	$unit_user = 'Temp Name';
+	
 	$unitlevel_name = $_POST['unitlevel_name'];
 	$deneme='';
 	date_default_timezone_set('America/New_York');
@@ -118,7 +118,7 @@ if(isset($_POST['treat'])){
 	}
 	
 	$wpdb->insert('actions_table', array(
-    'employee_name' => $unit_user,
+    'employee_name' => $current_user,
 	'unitlevel_name' => $unitlevel_name,
 	'treat' => $deneme,
 	'humidity' => $humidity_new,

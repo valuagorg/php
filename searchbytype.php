@@ -6,10 +6,17 @@
 get_header(); 
 global $wpdb
 ?>
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
+<!-- This file is no longer in use -->
 <?php
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
+
 <!DOCTYPE html>
 <html>
 <body>

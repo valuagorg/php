@@ -5,6 +5,9 @@
 
 get_header(); 
 global $wpdb
+
+?>
+<?php include_once "topnav.php"; 
 ?>
 
 <div>
@@ -99,9 +102,7 @@ if(isset($_POST['harvest'])){
 			$type=$row['type'];
 		}
 	}
-	
-	
-	
+		
 	if( $type == "classic"){
 		$wpdb->insert('actions_table', array(
 		'employee_name' => $current_user,

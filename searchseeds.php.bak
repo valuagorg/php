@@ -63,7 +63,7 @@ if(isset($_POST['go'])){
 ?>
 	
 <style>
-.btn {width: {width: 200px;};}
+.btn {width: 200px;}
 .form-control {width: 200px;}
 </style>
 

@@ -10,6 +10,7 @@ global $wpdb
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
+
 <!DOCTYPE html>
 <html>
 <body>
@@ -24,7 +25,7 @@ include_once "add/conn.php";
 	<br>
 	<h5>Type Filtering Example</h5>
     <a href="../seed-by-type/?id=1">Basil</a>
-	<a href="../seed-by-type/?id=19">Moss Curled Parsley</a>
+	<a href="../seed-by-type/?id=14">Cilantro</a>
 	<a href="../seed-by-type/?id=26">Broccoli</a>
 	<a href="../seed-by-type/?id=28">Afalfa</a>
 	<br>
