@@ -88,7 +88,7 @@ global $wpdb
 
 
 <h6>Planted Plugs / Weight</h6>
-<input type='text' name='planted_plugs' class='form-control' placeholder='Enter planted plugs.'>
+<input type='text' autocomplete="off" name='planted_plugs' class='form-control' placeholder='Enter planted plugs.'>
 	<br>
 	
 	

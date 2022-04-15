@@ -20,7 +20,7 @@ include_once "add/conn.php";
 
 		
 	<h6>Enter date</h6>
-	<input type='text' name='input_date' class='form-control' placeholder='ex: 04-01-2022'>
+	<input type='text' name='input_date' class='form-control' autocomplete="off" placeholder='ex: 04-01-2022'>
 	
 	<h6>Choose Color</h6>					
 	<select name="color" class="form-control" id="exampleFormControlSelect1">

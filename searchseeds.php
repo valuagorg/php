@@ -16,7 +16,7 @@ include_once "add/conn.php";
 <form method="post" enctype="multipart/form-data">
 					
 	<h6>Enter a Seed ID to Inspect</h6>
-	<input type='text' name='seed_id' class='form-control' placeholder='ex: 84'>
+	<input type='text' name='seed_id' autocomplete="off" class='form-control' placeholder='ex: 84'>
 	<br>
 		<button name="go" type="submit" class="btn btn-primary">Go</button>
 </form>

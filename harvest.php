@@ -42,7 +42,7 @@ global $wpdb
 	<br>
 	<h6>Harvested Pots / Weight</h6>
 	
-	<input type='text' name='total_pots' class='form-control' placeholder='Enter number'>
+	<input type='text' autocomplete="off" name='total_pots' class='form-control' placeholder='Enter number'>
 	<br>
 	<br>
 		<button name="harvest" type="submit" class="btn btn-primary">Harvest</button>				 

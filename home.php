@@ -13,7 +13,6 @@ include_once "add/conn.php";
 ?>
 <style><?php include 'plant_style.css'; ?></style>
 
-
 <!DOCTYPE html>
 <html>
 <body>
@@ -24,7 +23,7 @@ include_once "add/conn.php";
 </center>
 <br>
 <center>
-<nav id='nav' class='navbar'>
+<nav id='nav' >
 <a href="all-seeds/" id="optnav">All Seeds</a>
 <a href="search-seed-by-id/" id="optnav">Search Seeds</a>
 <a href="action-history/" id="optnav">Action History</a>

@@ -62,7 +62,7 @@ global $wpdb
 	
 
 	<h6>Transplanted Pots</h6> 
-	<input type='text' name='total_pots' class='form-control' placeholder='example: 50'>
+	<input type='text' autocomplete="off" name='total_pots' class='form-control' placeholder='example: 50'>
 	<br>
 	<br>
 		<button name="transplant" type="submit" class="btn btn-primary">Transplant</button>

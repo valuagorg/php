@@ -62,11 +62,11 @@ global $wpdb
 		
 	<label>Humidity</label>
 	<br>
-	<input type='text' name='humidity' class='form-control' placeholder='Enter humidity'>
-	<br>
+	<input type='text' autocomplete="off" name='humidity' class='form-control' placeholder='Enter humidity'>
+	
 	<label>Temperature</label>
 	<br>
-	<input type='text' name='temperature' class='form-control' placeholder='Enter temperature'>
+	<input type='text' autocomplete="off" name='temperature' class='form-control' placeholder='Enter temperature'>
 	<br>
 	<br>
 	<button name="treat" type="submit" class="btn btn-primary">Treat</button>
