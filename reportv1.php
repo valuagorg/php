@@ -11,6 +11,11 @@ include_once "add/func.php";
 include_once "add/conn.php";
 ?>
 <?php include_once "topnav.php"; ?>
+<center>
+<h4>  Report </h4>
+<br>
+<br>
+
 <table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>
@@ -94,7 +99,9 @@ if(isset($_GET['id'])){
 
 	</tbody>
 </table>	
+</center>
 <?php }?>
+
 <style>
 .table {text-align: center;}
 </style>

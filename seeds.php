@@ -10,7 +10,12 @@ include_once "add/conn.php";
 get_header(); 
 global $wpdb
 ?>
+
 <?php include_once "topnav.php"; ?>
+<center>
+<h4>  Result </h4>
+
+<br>
 <?php
 if(isset($_GET['id'])){
 	$seed_id = $_GET['id'];
@@ -182,6 +187,7 @@ if(isset($_GET['id'])){
 
 }
 ?>
+</center>
 <?php
 get_footer();
 ?>

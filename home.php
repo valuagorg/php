@@ -28,6 +28,11 @@ include_once "add/conn.php";
 <a href="search-seed-by-id/" id="optnav">Search Seeds</a>
 <a href="action-history/" id="optnav">Action History</a>
 <a href="report/" id="optnav">Report</a>
+<?php
+if( current_user_can('administrator') ) {
+	echo '<a href="admin-panel/" id="optnav">Admin Panel</a>';
+};
+?>
  
 </nav>
 </center>
@@ -47,6 +52,8 @@ include_once "add/conn.php";
 	<br>
 	<br>
 	<button name="harvest" type="submit" onclick="window.location.href='harvest'"  class="btn btn-success btn-lg" id="optbtn">Harvest</button>
+
+
 </center>	
 	
 <style>

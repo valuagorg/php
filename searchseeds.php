@@ -13,6 +13,10 @@ include_once "add/conn.php";
 <?php include_once "topnav.php"; ?>
 <div>
 <center>
+<center>
+<h4>  Search Seed </h4>
+
+<br>
 <form method="post" enctype="multipart/form-data">
 					
 	<h6>Enter a Seed ID to Inspect</h6>
@@ -29,6 +33,12 @@ include_once "add/conn.php";
 
 if(isset($_POST['go'])){
 	$seed_id = $_POST['seed_id'];
+	
+	
+	if(empty($seed_id)){
+		echo '<script>alert("Enter Seed ID")</script>';
+		exit();
+	}	
 	
 	$sql = "SELECT * FROM `seed_id_table` WHERE seed_id=$seed_id ";
 	if($result = $wpdb->get_results($sql, ARRAY_A)){

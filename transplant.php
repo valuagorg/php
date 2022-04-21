@@ -10,7 +10,8 @@ global $wpdb
 <div>
 <center>
 <form method="post" enctype="multipart/form-data">
-
+<h4>  Transplant </h4>
+<br>
 	<?php 
 		global $current_user; get_currentuserinfo();
 		$current_user=$current_user->display_name
@@ -95,7 +96,7 @@ if(isset($_POST['transplant'])){
 
 			
 	if(empty($unitlevel_name) OR empty($total_pots)){
-		echo '<script>alert("Enter number of Pots harvested")</script>';
+		echo '<script>alert("Empty Fields")</script>';
 		exit();
 	}
 	$sql = "SELECT * FROM `unitlevel_table` WHERE unitlevel_id = $unitlevel_name";

@@ -13,7 +13,6 @@ include_once "add/conn.php";
 ?>
 <style><?php include 'plant_style.css'; ?></style>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!DOCTYPE html>
 <html>
 <body>
@@ -29,6 +28,11 @@ include_once "add/conn.php";
 <a href="search-seed-by-id/" id="optnav">Search Seeds</a>
 <a href="action-history/" id="optnav">Action History</a>
 <a href="report/" id="optnav">Report</a>
+<?php
+if( current_user_can('administrator') ) {
+	echo '<a href="admin-panel/" id="optnav">Admin Panel</a>';
+};
+?>
  
 </nav>
 </center>
@@ -41,13 +45,15 @@ include_once "add/conn.php";
 	<button name="plant" type="submit" onclick="window.location.href='plant'" class="btn btn-primary btn-lg " id="optbtn">Plant</button>
 	<br>
 	<br>	
-	<button name="treat" type="submit" onclick="window.location.href='treat'" class="btn btn-primary btn-lg " id="optbtn">Treat</button>
+	<button name="treat" type="submit" onclick="window.location.href="treat"" class="btn btn-primary btn-lg " id="optbtn">Treat</button>
 	<br>
 	<br>
 	<button  name="transplant" type="submit" onclick="window.location.href='transplant'"  class="btn btn-primary btn-lg" id="optbtn">Transplant</button>
 	<br>
 	<br>
 	<button name="harvest" type="submit" onclick="window.location.href='harvest'"  class="btn btn-success btn-lg" id="optbtn">Harvest</button>
+
+
 </center>	
 	
 <style>

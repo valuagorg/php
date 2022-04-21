@@ -11,7 +11,10 @@ get_header();
 global $wpdb
 ?>
 <?php include_once "topnav.php"; ?>
+<center>
+<h4>  Result </h4>
 
+<br>
 <?php
 
 if(isset($_GET['id'])){
@@ -47,6 +50,7 @@ if(isset($_GET['id'])){
 	
 <div>
 <center>
+
 <form method="post" enctype="multipart/form-data">	
 	<h6>Selected Seed ID : <?php echo $seed_id; ?></h6>
 	<br>			
@@ -170,6 +174,7 @@ if(isset($_GET['id'])){
 
 }
 ?>
+</center>
 <?php
 get_footer();
 ?>

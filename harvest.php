@@ -9,10 +9,12 @@ global $wpdb
 ?>
 <?php include_once "topnav.php"; ?>
 
+
 <div>
 <center>
 <form method="post" enctype="multipart/form-data">
-
+<h4>  Harvest </h4>
+<br>
 	<?php 
 		global $current_user; get_currentuserinfo();
 		$current_user=$current_user->display_name
@@ -75,7 +77,7 @@ if(isset($_POST['harvest'])){
 
 			
 	if(empty($unitlevel_name) OR empty($total_pots)){
-		echo '<script>alert("Enter number of Pots harvested")</script>';
+		echo '<script>alert("Empty Fields")</script>';
 		exit();
 	}
 

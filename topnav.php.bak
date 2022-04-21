@@ -4,5 +4,10 @@
 <br>
 <a href="home/" size="+2" id="homenav">HOME</a>
 <br>
-<font size="+1">Big Yield Growers</font>
+<h6>Big Yield Growers</h6>	
+<br><br>
+<a href="javascript:history.back()">Back</a>
+
+<hr>
+
 </center>

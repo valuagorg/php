@@ -11,6 +11,9 @@ global $wpdb
 <center>
 <form method="post" enctype="multipart/form-data">
 
+<h4>  Plant </h4>
+<br>
+
 	<?php 
 		global $current_user; get_currentuserinfo();
 		$current_user=$current_user->display_name
@@ -48,7 +51,7 @@ global $wpdb
 		getElementsByName("planted_plugs")[0].placeholder = "Enter planted plugs."'>
 	<?php
 	//Query Operations
-	$sql = "SELECT * FROM `seed_table`";
+	$sql = "SELECT * FROM `seed_table` ORDER BY type";
 	$result = $wpdb->get_results($sql, ARRAY_A) ;
 	foreach($result as $row){
 		$seed_id = $row['seed_id'];
@@ -57,14 +60,31 @@ global $wpdb
 		$type=$row['type'];
 	?>
 
-	<option value="<?php echo $seed_id; ?>"><?php 
-	if ($seed_id != 26 AND $seed_id!=27 AND $seed_id!=28){
-		echo "H-".$seed_name;
+	<option 
+	value="
+	<?php echo $seed_id; ?>
+	" <?php 
+	if ($type=="ds"){
+		echo " disabled";
 	}
-	else{
+	?>>
+	
+	
+	<?php 
+	if ($type == "sprout"){
 		echo "S-".$seed_name;
 	}
-	?></option>
+
+	else{
+		if($type == "classic"){
+		echo "H-".$seed_name;
+		}
+		else{
+			echo "-----------------------";
+		}
+	}
+	?>
+	</option>
 	
 	<?php
 	}
@@ -73,7 +93,7 @@ global $wpdb
 	</select>								
 	<br>	
 	
-	<h6>Choose Color</h6>					
+	<h6>Choose Harvesting Color</h6>					
 	<select name="color" class="form-control" id="exampleFormControlSelect1">
 	  <option value="Red">Red 🔴</option>
 	  <option value="Blue">Blue 🔵</option>
@@ -88,7 +108,7 @@ global $wpdb
 
 
 <h6>Planted Plugs / Weight</h6>
-<input type='text' name='planted_plugs' class='form-control' placeholder='Enter planted plugs.'>
+<input type='text' autocomplete="off" name='planted_plugs' class='form-control' placeholder='Enter planted plugs.'>
 	<br>
 	
 	

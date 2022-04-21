@@ -11,7 +11,10 @@ include_once "add/func.php";
 include_once "add/conn.php";
 include_once "topnav.php";
 ?>
-
+<center>
+<h4>  Action History </h4>
+<br>
+<br>
 
 
 
@@ -100,6 +103,7 @@ include_once "topnav.php";
 				  
 				  </tbody>
 				</table>	
+				</center>
 	
 <?php
 get_footer();

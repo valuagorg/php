@@ -11,6 +11,10 @@ include_once "add/func.php";
 include_once "add/conn.php";
 include_once "topnav.php";
 ?>
+<center>
+<h4>  All Seeds </h4>
+<br>
+<br>
 <table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>
@@ -72,7 +76,7 @@ while($row=mysqli_fetch_assoc($result)){
 	<?php }?>				  
 	</tbody>
 </table>	
-
+</center>
 <style>
 .table {text-align: center;}
 </style>

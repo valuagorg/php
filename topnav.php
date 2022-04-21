@@ -4,5 +4,8 @@
 <br>
 <a href="home/" size="+2" id="homenav">HOME</a>
 <br>
-<font size="+0.5">Big Yield Growers</font>
+<h6>Big Yield Growers</h6>	
+<br>
+<hr>
+
 </center>

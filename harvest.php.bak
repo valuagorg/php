@@ -9,10 +9,12 @@ global $wpdb
 ?>
 <?php include_once "topnav.php"; ?>
 
+
 <div>
 <center>
 <form method="post" enctype="multipart/form-data">
-
+<h4>  Harvest </h4>
+<br>
 	<?php 
 		global $current_user; get_currentuserinfo();
 		$current_user=$current_user->display_name
@@ -42,7 +44,7 @@ global $wpdb
 	<br>
 	<h6>Harvested Pots / Weight</h6>
 	
-	<input type='text' name='total_pots' class='form-control' placeholder='Enter number'>
+	<input type='text' autocomplete="off" name='total_pots' class='form-control' placeholder='Enter number'>
 	<br>
 	<br>
 		<button name="harvest" type="submit" class="btn btn-primary">Harvest</button>				 
