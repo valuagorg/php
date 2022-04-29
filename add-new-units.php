@@ -78,10 +78,10 @@ if(isset($_POST['btnn'])){
 		}		
 		else{
 				for ($i = 1; $i < 4; $i++){
-				$unit_name = 'unit'.$unit_name.'_level'.$i;
+				$new_name = 'unit'.$unit_name.'_level'.$i;
 					
 				$wpdb->insert('unitlevel_table', array(
-				'unit_name' => $unit_name,
+				'unit_name' => $new_name,
 				'unit_seed_id' => "empty",
 				'stage' => "empty",
 				'just_unitname'  => $unit_name,

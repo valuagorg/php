@@ -45,7 +45,7 @@ if(isset($_POST['btnn'])){
 	$result = $wpdb->get_results($sql, ARRAY_A) ;
 
 	if(empty($unit_name)){
-		echo '<script>alert("Enter number of plugs planted")</script>';
+		echo '<script>alert("Empty Fields")</script>';
 		exit();
 	}
     
@@ -81,7 +81,7 @@ if(isset($_POST['btnn'])){
 				$unit_name = 'unit'.$unit_name.'_level'.$i;
 					
 				$wpdb->insert('unitlevel_table', array(
-				'unit_name' => $unit_name,
+				'unit_name' => $new_name,
 				'unit_seed_id' => "empty",
 				'stage' => "empty",
 				'just_unitname'  => $unit_name,
