@@ -52,6 +52,7 @@ if(isset($_POST['btnn'])){
 	for ( $i=0 ; $i < count($result); $i++){
 		if ($result[$i]['just_unitname'] == $unit_name ){
 			$var = 0;
+			break;
 		}
 		else{
 			$var = -1;
