@@ -3,22 +3,33 @@
  * Template Name: Delete Units
  */
 
+//Wordpress function get_header() for styling and Wordpress Database are called here
 get_header(); 
 global $wpdb
 ?>
 
+<!-- Including functions, database connections and header of our site included here -->
+<?php
+include_once "add/func.php";
+include_once "add/conn.php";
+include_once "topnav.php";
+?>
 
-<?php include_once "topnav.php"; ?>
-
+<!-- Center the table -->
 <center>
+
+<!-- Label -->
 <h4>  Delete Unit </h4>
 <br>
+
+<!--  Multipart form -->
 <form method="post" enctype="multipart/form-data">
 	<h6>Available Units and Levels</h6>
-	<select name="just_unitname" class="form-control" id="exampleFormControlSelect1">	
+	<!--  Select units to delete, we need to get units from our database -->
+	<select name="just_unitname" class="form-control" id="exampleFormControlSelect1">
+
+	<!-- To get data we used PHP before closing the select HTML tags -->	
 	<?php
-	//Query Operations
-	
 	$sql = "SELECT DISTINCT just_unitname FROM `unitlevel_table` ";
 	$result = $wpdb->get_results($sql, ARRAY_A) ;
 	foreach($result as $row){
@@ -27,42 +38,44 @@ global $wpdb
 	<option value="<?php echo $just_unitname; ?>"><?php echo 'Unit '.$just_unitname; ?></option>
 	<?php
 	}
-	//Query Operations
 	?>
 	</select>
 	<br>				
 
-
-
-
+<!-- To access this button, user needs to be an admin
+Didn't have enough time to make everything restricted.
+ -->
 <?php
 if( current_user_can('administrator') ) {
-	
 	echo '<button name="btnn" type="submit" class="btn btn-primary">Delete Unit</button>';
-
 };
 ?>
 </form>
 </center>
 
+<!-- If button is clicked delete the selected unit -->
 <?php
 if(isset($_POST['btnn'])){
 	$just_unitname = $_POST['just_unitname'];
-		
 	
+	// SQL Operation
 	$wpdb->delete('unitlevel_table', array(
 	'just_unitname' => $just_unitname,
 	));
-	echo "<meta http-equiv='refresh' content='0'>";
-	}
 	
+	//refresh page, used for refreshing form data
+	echo "<meta http-equiv='refresh' content='0'>";
+	
+	}
 	?>
 	
+<!-- CSS Styling -->	
 <style>
 .form-control {width: 230px; text-align: center;}
 .btn {width: 200px;}
 </style>
 
+<!-- Wordpress function get_footer() is called here -->	
 <?php
 get_footer();
 ?>

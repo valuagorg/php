@@ -1,31 +1,42 @@
 <?php
-include_once "add/func.php";
-include_once "add/conn.php";
-?>
-<?php
 /**
  * Template Name: Sprouts
  */
 
+//Wordpress function get_header() for styling and Wordpress Database are called here
 get_header(); 
 global $wpdb
 ?>
-<?php include_once "topnav.php"; ?>
-<center>
-<h4>  Result </h4>
 
-<br>
+<!-- Including functions, database connections and header of our site included here -->
 <?php
+include_once "add/func.php";
+include_once "add/conn.php";
+include_once "topnav.php";
+?>
 
+<!-- Center the table -->
+<center>
+
+<!-- Label -->
+<h4>  Result </h4>
+<br>
+
+<?php
 if(isset($_GET['id'])){
+	
+	// set variable from page name
 	$seed_id = $_GET['id'];
 	
+	// use foreign key seed_id to get seed_type from seed_id_table
 	$sql = "SELECT * FROM `seed_id_table` WHERE seed_id=$seed_id ";
 	if($result = $wpdb->get_results($sql, ARRAY_A)){
 		foreach($result as $row){
 			$seed_type=$row['seed_type'];
 		}
 	}
+	
+	// use another foreign key seed_type to get type from seed_table
 	$sql = "SELECT * FROM `seed_table` WHERE seed_id=$seed_type ";
 	if($result = $wpdb->get_results($sql, ARRAY_A)){
 		foreach($result as $row){
@@ -33,9 +44,12 @@ if(isset($_GET['id'])){
 		}
 	}
 	
+	// if type is sprout get variables
 	if ( $type == "sprout"){
 		$sql = "SELECT * FROM seed_id_table WHERE seed_id='$seed_id'";
 		$result = mysqli_query($conn, $sql);
+		
+		// Start a while loop, we will do everything inside this loop
 		while($row=mysqli_fetch_assoc($result)){		
 			$seed_type = $row['seed_type'] ;
 			$seed_stage = $row['seed_stage'];
@@ -43,23 +57,30 @@ if(isset($_GET['id'])){
 			$seed_location = $row['seed_location'];	
 			$seed_expected_date = $row['seed_expected_date'];
 	}
-		
-
 	?>
 
-	
 <div>
 <center>
 
+<!-- Open multipart form to display some data about the seed -->
 <form method="post" enctype="multipart/form-data">	
+
 	<h6>Selected Seed ID : <?php echo $seed_id; ?></h6>
-	<br>			
+	<br>		
+	
 	<h6>Location Now : <?php echo unitlevel_name_converter($seed_location); ?></h6>
 	<br>
+	
 	<h6>Type : <?php echo seed_name_converter($seed_type); ?></h6>
 	<br>
+	
 	<h6>Stage : <?php echo $seed_stage; ?></h6>
 	<br>
+	
+	<!-- To add colored circles according to harvesting color we used if loops. 
+	This basically checks the variables with each color's string name, 
+	When it finds the color it concatenate the circle next to it
+	-->	
 	<h6>Color : <?php if($seed_color == "Red"){
 		$newcolor=$seed_color." 🔴";
 		echo $newcolor; 
@@ -89,8 +110,9 @@ if(isset($_GET['id'])){
 		echo $newcolor; 
 	} ?></h6>
 	<br>
-	<h6>Expected Harvest Date : <?php
 	
+	<h6>Expected Harvest Date : <?php
+	// if seed is harvested check for a condition, then print accordingly
 	if($seed_expected_date==5555){
 		$seed_expected_date='--';
 		echo $seed_expected_date;
@@ -103,11 +125,10 @@ if(isset($_GET['id'])){
 	</h6>
 	<br>
 
-
+<!-- Close the form -->
 </form>
-<style>
-.table {text-align: center;}
-</style>
+
+<!-- We created a table -->
 <hr>
 <table class="table table-striped">
 	<thead class="thead-dark">
@@ -126,6 +147,8 @@ if(isset($_GET['id'])){
 		</tr>
 	</thead>
 	<tbody>
+	
+	<!-- To fill the table we will use data from actions_table -->
 	<?php
 		$sql = "SELECT * FROM `actions_table` WHERE seed_id='$seed_id'";
 		$result = mysqli_query($conn, $sql);
@@ -144,8 +167,11 @@ if(isset($_GET['id'])){
 				$harvested_weight = $row['harvested_weight'];
 				$action_date = $row['action_date'];	
 	?>	
+
+		<!-- We use HTML for each different row, however we need to use PHP inside it to show database data -->
+		<!-- We set values of rows and columns from the variables we set earlier  -->
 		<tr>
-		<!-- Echoing from DB starts-->
+
 			<th scope="row"><?php echo $actions_id;?></th>
 				<td><?php echo $employee_name; ?></td>
 				<td><?php echo unitlevel_name_converter($unitlevel_name); ?></td>
@@ -158,13 +184,10 @@ if(isset($_GET['id'])){
 				<td><?php echo $harvested_weight; ?></td>
 				<td><?php echo $action_date; ?></td>	  
 			</tr>
-			
-
-
 			<?php }?> 
 
-
 	</tbody>
+<!-- Close the table -->
 </table>
 </center>
 </div>
@@ -174,7 +197,13 @@ if(isset($_GET['id'])){
 
 }
 ?>
-</center>
+
+<!-- CSS Styling -->
+<style>
+.table {text-align: center;}
+</style>
+
+<!-- Wordpress function get_footer() is called here -->	
 <?php
 get_footer();
 ?>

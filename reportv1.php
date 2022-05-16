@@ -3,49 +3,54 @@
  * Template Name: reportv1
  */
 
+//Wordpress function get_header() for styling and Wordpress Database are called here
 get_header(); 
 global $wpdb
 ?>
+
+<!-- Including functions, database connections and header of our site included here -->
 <?php
 include_once "add/func.php";
 include_once "add/conn.php";
+include_once "topnav.php";
 ?>
-<?php include_once "topnav.php"; ?>
+
+<!-- Center the table -->
 <center>
+
+<!-- Label -->
 <h4>  Report </h4>
 <br>
 <br>
 
+<!-- Top of the table is set here -->
 <table class="table table-striped">
 	<thead class="thead-dark">
 		<tr>
 			<th scope="col">Id</th>
 			<th scope='col'>Type</th>
 			<th scope="col">Color</th>
-			
 			<th scope="col">Harvest Amount</th>
 			<th scope="col">Harvest Date</th>
 		</tr>
 	</thead>
 <tbody>
-<?php
 
+
+<?php
 if(isset($_GET['id'])){
-	$id = $_GET['id']; #blue+harvested
 	
+	// set variable from page name
+	$id = $_GET['id']; #ex: Red+04-27-2022
 	$str = $id;
+	// set a delimiter to explode our variable
 	$delimiter = ' ';
 	$words = explode($delimiter, $str);
-	 
-	#echo $words[0]; #color
-	#echo "<br>";
-	#echo $words[1]; #state
 
-
-	
-	
+	// after exploding, use it in SQL to specifically select the set color and date, also harvested ones of course
 	$sql = "SELECT * FROM seed_id_table WHERE  seed_color='$words[0]' AND seed_stage='harvested' AND harvest_date='$words[1]' ORDER BY seed_id DESC";
 	$result = mysqli_query($conn, $sql);
+	// Start a while loop, we will do everything inside this loop
 	while($row=mysqli_fetch_assoc($result)){		
 		$seed_id = $row['seed_id'] ;
 		$seed_type = $row['seed_type'] ;
@@ -59,9 +64,16 @@ if(isset($_GET['id'])){
 	?>
 	
 
-	<!-- Echoing from DB starts-->
+	<!-- We use HTML for each different row, however we need to use PHP inside it to show database data -->
+	<!-- We set values of rows and columns from the variables we set earlier  -->
 	<th scope="row"><?php echo $seed_id;?></th>
+	
 		<td><?php echo seed_name_converter($seed_type); ?></td>
+		
+		<!-- To add colored circles according to harvesting color we used if loops. 
+		This basically checks the variables with each color's string name, 
+		When it finds the color it concatenate the circle next to it
+		-->
 		<td><?php if($seed_color == "Red"){
 		$newcolor=$seed_color." 🔴";
 		echo $newcolor; 
@@ -92,19 +104,24 @@ if(isset($_GET['id'])){
 		} ?></td>
 		
 		<td><?php echo $harvest_amount; ?></td>
+		
 		<td><?php echo $harvest_date; ?></td>
+		
 	</tr>
 	
 	<?php }?>
-
-	</tbody>
+</tbody>
+<!-- Close the table -->
 </table>	
 </center>
 <?php }?>
 
+<!-- CSS Styling -->
 <style>
 .table {text-align: center;}
 </style>
+
+<!-- Wordpress function get_footer() is called here -->	
 <?php
 get_footer();
 ?>

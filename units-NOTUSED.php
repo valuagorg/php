@@ -2,14 +2,9 @@
 include_once "add/func.php";
 include_once "add/conn.php";
 ?>
-<!-- This file is no longer in use -->
-<!-- This file is no longer in use -->
-<!-- This file is no longer in use -->
-<!-- This file is no longer in use -->
-<!-- This file is no longer in use -->
-<!-- This file is no longer in use -->
-<!-- This file is no longer in use -->
-
+<!-- THIS FILE IS NO LONGER IN USE -->
+<!-- THIS FILE IS NO LONGER IN USE -->
+<!-- THIS FILE IS NO LONGER IN USE -->
 <?php
 /**
  * Template Name: Units and Levels

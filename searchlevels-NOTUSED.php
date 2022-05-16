@@ -5,6 +5,9 @@
 get_header(); 
 global $wpdb
 ?>
+<!-- THIS FILE IS NO LONGER IN USE -->
+<!-- THIS FILE IS NO LONGER IN USE -->
+<!-- THIS FILE IS NO LONGER IN USE -->
 
 <div>
 <center>

@@ -1,6 +1,7 @@
 <?php
 include_once "conn.php";
 
+//NOT USED
 function bs_jumbotron(){
 	echo '<div class="jumbotron jumbotron">
 			  <div class="container">
@@ -10,7 +11,7 @@ function bs_jumbotron(){
 			</div>'; 
 }
 
-//helper function for post page
+// converts seed id to seed name
 function seed_name_converter($id){
 	global $conn;
 	$sql = "SELECT * FROM seed_table WHERE seed_id='$id'";
@@ -21,6 +22,7 @@ function seed_name_converter($id){
 	}
 }
 
+// converts foreign key id to type 
 function seed_type_converter($id){
 	global $conn;
 	$sql = "SELECT * FROM seed_id_table WHERE seed_id='$id'";
@@ -31,7 +33,7 @@ function seed_type_converter($id){
 	}
 }
 
-
+// converts foreign key id to name
 function unitlevel_name_converter($id){
 	if($id==4444){
 		echo 'In Store';
@@ -47,7 +49,7 @@ function unitlevel_name_converter($id){
 	}
 }
 
-//helper function for post page
+//NOT USED
 function username($id){
 	global $conn;
 	$x = "SELECT * FROM employee_table WHERE employee_id='$id'";
