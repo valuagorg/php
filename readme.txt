@@ -19,4 +19,4 @@
  
   Below you can see the database table schemes, the usual WP tables are excluded.
   
-  ![Database Structure](https://github.com/)
+  ![Database Structure](https://github.com/valuagorg/php/blob/master/databaseimg.png)
