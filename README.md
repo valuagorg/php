@@ -11,7 +11,7 @@
  ## Pages
  
   - seed
-   (https://github.com/valuagorg/php/blob/master/imgs/plant.png)
+  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/plant.png)
   - 
   - 
   
