@@ -42,7 +42,7 @@
  - Update data from unit table. -> Done for showing which units are available or not.
  - Insert data into seed id table. -> Done for unique ids which will later be used in search.
  
- Complete SQL work process is shown above:
+ 3 SQL processes of plating are shown above:
   
  - Table Result of a Search
  
