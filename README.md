@@ -48,7 +48,7 @@
  
   ![Alt](https://github.com/valuagorg/php/blob/master/imgs/searchresult.png)
   
- This table is generated for showing unique seeds action history. This is developed because a tracking process was needed. This table shows data from action table of a seed, also data from seed id table. To implement this we needed to write 3 different PHP files, 1 for searching and 2 for results since there are 2 types of seeds and they are very different from each other.
+ This table is generated for showing unique seeds action history. This is developed because a tracking process was needed. This table shows data from action table of a seed, also data from seed id table. To implement this we needed to write 3 different PHP files, 1 for searching and 2 for results since there are 2 types of seeds and they are very different from each other. Shown screenshot above is result of a sprout.
  
  - Admin Panel
  
