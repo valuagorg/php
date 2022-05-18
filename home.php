@@ -25,7 +25,7 @@ include_once "add/conn.php";
 
 <!-- Center and add BYG logo -->
 <center>
-<img width='250px' height='250px' src="<?php echo get_template_directory_uri(); ?>/BYG LOGO_HIGHRES.png"/>
+<img width='250px' height='250px' src="<?php echo get_template_directory_uri(); ?>/imgs/BYG LOGO_HIGHRES.png"/>
 </center>
 <br>
 
