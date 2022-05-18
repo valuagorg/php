@@ -2,7 +2,9 @@
 
 ## Description
  
- Our main object for this project was to digitalize the forms that are used by employees of the Big Yield Growers. This forms were used for tracking the planting operation. After we digitalize the main forms, we also developed some pages that collected and showed data in a table. Gradually developing the website for 2 semesters, we implemented many different processes and quaility of life changes. After the implementation of sprout process in the plating site, we also adapted our site to collect datas of these sprouts too. We implemented a search function which serves as another tool to inspect the seeds planted.
+ Our main object for this project was to digitalize the forms that are used by employees of the Big Yield Growers. This forms were used for tracking the planting operation. After we digitalized the main forms, we also developed some pages that collected and showed data in a table. 
+ 
+ Gradually developing the website for 2 semesters, we implemented many different processes and quaility of life changes. After the implementation of sprout process in the plating site, we also adapted our site to collect datas of these sprouts too. We implemented a search function which serves as another tool to inspect the seeds planted.
  
 ## Team Members
 
@@ -27,17 +29,26 @@
  - Deploy our code using our deploy script
  - Go to wordpress and publish page templates manually
  
- ## Planting Process Form
- - sides 
+ ## Some Screenshots of the Website
+ - Planting Process Form 
  
   ![Alt](https://github.com/valuagorg/php/blob/master/imgs/plant.png)
   
-   Planting page
+ This form is used to replace planting process tracking papers used by employees. As in the planting facility, employee first enters the level that is being worked on. Then selects the seed type from a list provided from our database. And employee selects a harvesting color for the seed. After entering the amount planted and button clicked, backend process starts.
+
+ When this button is clicked, our website also collects data of date and the employee name to store in the database. Complete SQL work process is:
   
- ## Table Result of a Search
+  - Insert data into actions table. -> To track actions done by employees.
+ - Update data from unit table. -> Done for showing which units are available or not.
+ - Insert data into seed id table. -> Done for unique ids which will later be used in search.
+ 
+  
+ - Table Result of a Search
+ 
   ![Alt](https://github.com/valuagorg/php/blob/master/imgs/searchresult.png)
  
- ## Admin Panel
+ - Admin Panel
+ 
   ![Alt](https://github.com/valuagorg/php/blob/master/imgs/adminpanelpng.png)
  
  ## Database Structure
