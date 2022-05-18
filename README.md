@@ -9,15 +9,14 @@
  
  
  ## Plant
-  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/plant.png)\
-  
-  Trial words
+  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/plant.png)
+   Trial words
   
  ## Table Result
-  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/searchresult.png)\
+  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/searchresult.png)
  
  ## Admin Panel
-  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/adminpanel.png)\
+  ![Alt](https://github.com/valuagorg/php/blob/master/imgs/adminpanelpng.png)
  
  ## Database Structure
  
