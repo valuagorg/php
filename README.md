@@ -5,6 +5,7 @@
  Our main object for this project was to digitalize the forms that are used by employees of the Big Yield Growers. This forms were used for tracking the planting operation. After we digitalized the main forms, we also developed some pages that collected and showed data in a table. 
  
  Gradually developing the website for 2 semesters, we implemented many different processes and quaility of life changes. After the implementation of sprout process in the plating site, we also adapted our site to collect datas of these sprouts too. We implemented a search function which serves as another tool to inspect the seeds planted.
+ - Documentation can be found in files above.
  
 ## Team Members
 
