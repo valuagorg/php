@@ -36,20 +36,25 @@
   
  This form is used to replace planting process tracking papers used by employees. As in the planting facility, employee first enters the level that is being worked on. Then selects the seed type from a list provided from our database. And employee selects a harvesting color for the seed. After entering the amount planted and button clicked, backend process starts.
 
- When this button is clicked, our website also collects data of date and the employee name to store in the database. Complete SQL work process is:
+ When this button is clicked, our website also collects data of date and the employee name to store in the database. 
   
-  - Insert data into actions table. -> To track actions done by employees.
+ - Insert data into actions table. -> To track actions done by employees.
  - Update data from unit table. -> Done for showing which units are available or not.
  - Insert data into seed id table. -> Done for unique ids which will later be used in search.
  
+ Complete SQL work process is shown above:
   
  - Table Result of a Search
  
   ![Alt](https://github.com/valuagorg/php/blob/master/imgs/searchresult.png)
+  
+ This table is generated for showing unique seeds action history. This is developed because a tracking process was needed. This table shows data from action table of a seed, also data from seed id table.
  
  - Admin Panel
  
   ![Alt](https://github.com/valuagorg/php/blob/master/imgs/adminpanelpng.png)
+  
+ Admin Panel is restricted only to admin users of the website. Here you can add or delete seeds or units. This is restricted because changing these were normally done by hand in the database since these values won't change often.  
  
  ## Database Structure
  
