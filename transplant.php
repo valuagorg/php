@@ -33,7 +33,7 @@ include_once "topnav.php";
 	
 	<!--  Select a unit to transplant, we need to get units from our database -->
 	<h6>Available Units and Levels</h6>
-	<!--  Only units shown are either Plug stage -->
+	<!--  Only units shown are Plug stage -->
 	<select name="unitlevel_name" class="form-control" id="exampleFormControlSelect1">	
 	<?php
 	$sql = "SELECT * FROM `unitlevel_table` WHERE stage='Plug'";
@@ -53,6 +53,7 @@ include_once "topnav.php";
 	
 	<!--  Select a unit to transplan to, we need to get units from our database -->
 	<h6>Transplant To</h6>
+	<!--  Only units shown are Empty  -->
 	<select name="transplant_name" class="form-control" id="exampleFormControlSelect1">	
 	<?php
 	$sql = "SELECT * FROM `unitlevel_table` WHERE stage='empty'";
