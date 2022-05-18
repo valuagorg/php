@@ -11,7 +11,7 @@
  ## Pages
  
   - seed
-   ![Pages](https://github.com/valuagorg/php/blob/master/imgs/plant.png)
+   (https://github.com/valuagorg/php/blob/master/imgs/plant.png)
   - 
   - 
   
