@@ -9,9 +9,9 @@
  
 ## Team Members
 
- - Mahmut Cuneyt Unsal
- - Emre Serdar
- - Erkut Cetiner
+ - Mahmut Cuneyt Unsal -> Backend Developer
+ - Emre Serdar         -> Frontend Developer
+ - Erkut Cetiner       -> Frontend Developer
  
 ## Requirements for installation 
 
